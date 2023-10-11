@@ -19,7 +19,7 @@ function mergesort(array) {
                             array[b] = array[b - 1]
                         array[loSecIn] = temp;
                         
-                        hiSecIn += 2;  //These are incremented because the array is shifted, they must refer to the same values as before. hiSecIn is incremented twice because it is also going to the next item of its section.
+                        hiSecIn ++;  //These are incremented because the array is shifted, they must refer to the same values as before.
                         loSecIn++;
                     }
                 
