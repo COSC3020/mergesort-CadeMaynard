@@ -18,17 +18,17 @@ function mergesort(array) {
                         for(b = hiSecIn; b >= loSecIn; b--)
                             array[b] = array[b - 1]
                         array[loSecIn] = temp;
-
-                        hiSecIn += 2;//These are incremented because the array is shifted, they must refer to the same values as before. hiSecIn is incremented twice because it is also going to the next item of its section.
+                        
+                        hiSecIn += 2;  //These are incremented because the array is shifted, they must refer to the same values as before. hiSecIn is incremented twice because it is also going to the next item of its section.
                         loSecIn++;
                     }
+                
             }
             a += section;
         } while (a < array.length)
     }
     return array;
 }
-
 /*
 Sources:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow 
