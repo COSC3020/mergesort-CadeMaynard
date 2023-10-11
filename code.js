@@ -10,7 +10,7 @@ function mergesort(array) {
             loSecIn = loSec;
             hiSecIn = hiSec;
 
-            while(loSecIn < hiSecIn && hiSecIn < (loSec + section) && hiSecIn < array.length){ //Sorts the section
+            while(loSecIn < hiSecIn && hiSecIn <= (loSec + section) && hiSecIn < array.length){ //Sorts the section
                 if(array[loSecIn] <= array[hiSecIn]) {
                     loSecIn++;
                 } else {   //Shifts the unsorted section of the array to the right and puts the recently compared item and the end of the sorted section.
