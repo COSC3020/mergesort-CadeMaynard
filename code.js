@@ -4,13 +4,13 @@ function mergesort(array) {
         a = 0;
         do {
             loSec = a;
-            if(loSec + (section/2) < array.length) { hiSec = loSec + (section/2); } 
-            else { hiSec = array.length - 1; }
+            if(section > array.length) {hiSec = section/2; } 
+            else { hiSec = loSec + (section/2) }
 
             loSecIn = loSec;
             hiSecIn = hiSec;
 
-            while(loSecIn < hiSecIn && hiSecIn <= (loSec + section) && hiSecIn < array.length){ //Sorts the section
+            while(loSecIn < hiSecIn && hiSecIn < (loSec + section) && hiSecIn < array.length){ //Sorts the section
                 if(array[loSecIn] <= array[hiSecIn]) {
                     loSecIn++;
                 } else {   //Shifts the unsorted section of the array to the right and puts the recently compared item and the end of the sorted section.
